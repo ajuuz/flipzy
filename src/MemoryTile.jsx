@@ -9,6 +9,7 @@ import five from '/5.png'
 import six from '/6.png'
 import seven from '/7.jpg'
 import eight from '/8.jpg'
+import backSide from '/backSide.png'
 
 const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}) => {
 
@@ -55,6 +56,10 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
           style={{
             position: "absolute",
             backfaceVisibility: "hidden", // Hide back when front is visible
+            backgroundImage:`url(${backSide})`,
+            backgroundPosition:"center",
+            backgroundSize:"cover",
+
             width: "100%",
             height: "100%",
             backgroundColor: "lightblue",
