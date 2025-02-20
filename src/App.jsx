@@ -23,7 +23,7 @@ const App = () => {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap elements
       }
       setArray(shuffled);
-      //test
+      //test2
   },[])
 
   const handleSelect=(index)=>{
