@@ -30,8 +30,8 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
       onClick={()=>handleSelect(index)}
       style={{
         perspective: "1000px", // Creates a 3D effect
-        width: "200px",
-        height: "200px",
+        width: "150px",
+        height: "150px",
       }}
     >
       <motion.div
