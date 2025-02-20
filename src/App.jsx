@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import MemoryTile from './MemoryTile';
 import Celebration from './Celebration';
 import wallpaper from '/wallpaper.gif'
+import useSound from 'use-sound';
+import investmentsAudio from '/audio/Investments.mp3'
 
 const App = () => {
 
@@ -13,6 +15,8 @@ const App = () => {
   const [secondSelect,setSecondSelect] = useState(null)
   const [matchedValues,setMatchedValues] = useState({});
   const [isCompleted,setIsCompleted] = useState(false)
+
+  const [play] = useSound(investmentsAudio)
   const timerRef = useRef(null)
 
 
@@ -26,6 +30,20 @@ const App = () => {
       setArray(shuffled);
       //test2
   },[])
+
+  useEffect(() => {
+    const playAudio = async () => {
+      try {
+        await play(); // Attempt autoplay
+        console.log("Autoplay successful!");
+      } catch (err) {
+        console.warn("Autoplay blocked. Retrying in 3 seconds...", err);
+        setTimeout(play, 3000); // Retry after 3 seconds
+      }
+    };
+
+    playAudio();
+  }, [play]);
 
   const handleSelect=(index)=>{
 
