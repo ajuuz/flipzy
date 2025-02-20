@@ -9,7 +9,8 @@ import five from '/5.png'
 import six from '/6.png'
 import seven from '/7.jpg'
 import eight from '/8.jpg'
-import backSide from '/backSide.png'
+import backSide from '/backSide.jpeg'
+
 
 const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}) => {
 
@@ -31,7 +32,7 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
       onClick={()=>handleSelect(index)}
       style={{
         perspective: "1000px", // Creates a 3D effect
-        width: "150px",
+        width: "120px",
         height: "150px",
       }}
     >
@@ -55,11 +56,10 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
         <div
           style={{
             position: "absolute",
-            backfaceVisibility: "hidden", // Hide back when front is visible
             backgroundImage:`url(${backSide})`,
             backgroundPosition:"center",
             backgroundSize:"cover",
-
+            filter:"brightness(70%)",
             width: "100%",
             height: "100%",
             backgroundColor: "lightblue",
@@ -69,7 +69,6 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
             borderRadius: "8px",
           }}
         >
-          Front
         </div>
 
         {/* Back of the tile */}
@@ -80,7 +79,7 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
             backgroundImage:`url(${images[value]})`,
             backgroundPosition:"center",
             backgroundSize:"cover",
-            // objectFit:""
+            filter:"brightness(100%)",
             width: "100%",
             height: "100%",
             backgroundColor: "lightcoral",
@@ -91,7 +90,6 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
             borderRadius: "8px",
           }}
         >
-          {value}
         </div>
       </motion.div>
     </motion.div>

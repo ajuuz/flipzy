@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import MemoryTile from './MemoryTile';
 import Celebration from './Celebration';
+import wallpaper from '/wallpaper.gif'
 
 const App = () => {
 
@@ -77,17 +78,15 @@ const App = () => {
 
 
   return (
-    <div className='flex justify-center h-screen items-center'>
+    <div style={{backgroundImage:`url(${wallpaper})`,filter:"brightness(100%)"}} className='bg-red-950 flex justify-center h-screen items-center'>
       {isCompleted 
       ?<Celebration/>
       :
-      <div className='grid grid-cols-4 gap-2'>
+      <div className='grid grid-cols-4 gap-x-5 gap-y-3'>
       {array.map((value,index)=>
         <MemoryTile handleSelect={handleSelect} value={value} index={index} select={select} secondSelect={secondSelect} matchedValues={matchedValues}/>
       )}
-      {/* {array.map((ele,index)=><div onClick={()=>handleSelect(index)} className={` flex justify-center items-center text-xl font-bold h-32 w-32 border bg-slate-300`}>
-        {[select,secondSelect].includes(index)?ele:matchedValues[ele]?ele:""}
-        </div>)} */}
+      
       </div>
       }
     </div>
