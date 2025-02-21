@@ -9,7 +9,7 @@ import five from '/5.png'
 import six from '/6.png'
 import seven from '/7.jpg'
 import eight from '/8.jpg'
-import backSide from '/backSide25.gif'
+import backSide from '/backSide32.gif'
 
 
 const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}) => {
@@ -59,7 +59,7 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
             backgroundImage:`url(${backSide})`,
             backgroundPosition:"center",
             backgroundSize:"cover",
-            filter:"brightness(80%)",
+            filter:"brightness(100%)",
             width: "100%",
             height: "100%",
             backgroundColor: "lightblue",
