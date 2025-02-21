@@ -37,6 +37,7 @@ const App = () => {
           if(prev<=1){
             clearInterval(countDownRef.current);
             setStatus("failed")
+            setMatchedValues({})
             return 0;
           }
           return prev-1;
@@ -107,9 +108,9 @@ const App = () => {
 
       timer = setTimeout(()=>{
         setStatus("success")
+        setMatchedValues({})
       },1000)
 
-      setMatchedValues({})
     }
   
     return ()=>clearTimeout(timer)
