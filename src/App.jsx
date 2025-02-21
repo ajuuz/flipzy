@@ -38,6 +38,8 @@ const App = () => {
             clearInterval(countDownRef.current);
             setStatus("failed")
             setMatchedValues({})
+            setSelect(null)
+            setSecondSelect(null)
             return 0;
           }
           return prev-1;
