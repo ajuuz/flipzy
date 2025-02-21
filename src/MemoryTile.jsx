@@ -9,7 +9,7 @@ import five from '/5.png'
 import six from '/6.png'
 import seven from '/7.jpg'
 import eight from '/8.jpg'
-import backSide from '/backSide.jpeg'
+import backSide from '/backSide25.gif'
 
 
 const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}) => {
@@ -32,8 +32,8 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
       onClick={()=>handleSelect(index)}
       style={{
         perspective: "1000px", // Creates a 3D effect
-        width: "120px",
-        height: "150px",
+        width: "115px",
+        height: "155px",
       }}
     >
       <motion.div
@@ -59,14 +59,14 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
             backgroundImage:`url(${backSide})`,
             backgroundPosition:"center",
             backgroundSize:"cover",
-            filter:"brightness(70%)",
+            filter:"brightness(80%)",
             width: "100%",
             height: "100%",
             backgroundColor: "lightblue",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            borderRadius: "8px",
+            borderRadius: "15px",
           }}
         >
         </div>

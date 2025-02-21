@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import MemoryTile from './MemoryTile';
-import wallpaper from '/wallpaper.gif'
+import wallpaper from '/wallpaper7.gif'
 import useSound from 'use-sound';
 import investmentsAudio from '/audio/Investments.mp3'
 import CompletionPage from './CompletionPage';
@@ -120,14 +120,22 @@ const App = () => {
 
 
   return (
-    <div style={{backgroundImage:`url(${wallpaper})`,filter:"brightness(100%)"}} className='bg-red-950 flex justify-center h-screen items-center'>
+    <div style={
+      {
+        backgroundImage: `url(${wallpaper})`,
+        backgroundSize:"contain",
+        backgroundPosition:"-400px center",
+        filter: "brightness(100%)",    // Optional filter adjustment
+      }
+    } 
+      className='bg-red-950 flex justify-center h-screen items-center'>
       {status==="success" 
       ?<CompletionPage isSuccess={true} setStatus={setStatus} setCountDown={setCountDown} setRetry={setRetry}/>
       :status==="failed"
       ?<CompletionPage isSuccess={false} setStatus={setStatus} setCountDown={setCountDown} setRetry={setRetry}/>
       :
       <div>
-        <div className='absolute py-5 px-6 rounded-[50%] border  top-2 right-10 bg-black text-white font-bold'>
+        <div className='absolute py-7 px-7 rounded-[50%] border  top-2 right-10 bg-black text-white font-bold'>
           {countDown}
         </div>
         <div className='grid grid-cols-4 gap-x-5 gap-y-3'>
