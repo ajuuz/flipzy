@@ -54,6 +54,7 @@ const MemoryTile = ({handleSelect,value,index,select,secondSelect,matchedValues}
       >
         {/* Front of the tile */}
         <div
+          className="border-2 border-slate-800"
           style={{
             position: "absolute",
             backgroundImage:`url(${backSide})`,

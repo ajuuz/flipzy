@@ -135,8 +135,8 @@ const App = () => {
       ?<CompletionPage isSuccess={false} setStatus={setStatus} setCountDown={setCountDown} setRetry={setRetry}/>
       :
       <div>
-        <div className='absolute py-7 px-7 rounded-[50%] border  top-2 right-10 bg-black text-white font-bold'>
-          {countDown}
+        <div className='absolute h-14 w-14 rounded-[50%] overflow-hidden  flex justify-center items-end top-2 right-10 border-[4px] border-purple-900  text-white font-bold'>
+        <div style={{height:`${(countDown/60)*100}%`}} className='absolute  w-full  bg-gradient-to-b from-purple-500  via-purple-800 to-purple-950  flex  justify-center text-xs'></div>
         </div>
         <div className='grid grid-cols-4 gap-x-5 gap-y-3'>
         {array.map((value,index)=>
