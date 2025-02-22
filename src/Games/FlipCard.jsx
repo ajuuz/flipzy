@@ -67,15 +67,15 @@ const FlipCard = () => {
 
     if(select===null){
       setSelect(index)
-    }else{
-
+    }
+    else{
       if(select===index){
         setSelect(null)
         return
       }
       setSecondSelect(index)
 
-      if(array[select]===array[index]){
+      if(!secondSelect && array[select]===array[index]){
 
         setMatchedValues((prev)=>({...prev,[array[index]]:true}))
           matchedValues[array[index]] = true;

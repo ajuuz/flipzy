@@ -57,7 +57,7 @@ const TicTac = () => {
                 const [x1,y1] = player2Array[i];
                 for(let j=i+1;j<player2Array.length;j++){
                     const [x2,y2] = player2Array[j];
-                    const slope = (y2-y1)/(x2-x1);
+                    const slope = Math.abs((y2-y1))/Math.abs((x2-x1));
                     slopeCount[slope] ? slopeCount[slope]++ : slopeCount[slope] = 1;
                 }
                 
@@ -67,7 +67,7 @@ const TicTac = () => {
             }
 
             if(player1Array.length+player2Array.length===9){
-                console.log("both lose")
+                setTurn(1)
             }
         }
     },[player1Array,player2Array])
@@ -82,6 +82,7 @@ const TicTac = () => {
           ])
           setPlayer1Array([])
           setPlayer2Array([])
+          setTurn(1)
     }
 
   
