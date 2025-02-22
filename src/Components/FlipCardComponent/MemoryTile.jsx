@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import one from '/1.jpg'
-import two from '/2.png'
-import three from '/3.png'
-import four from '/4.png'
-import five from '/5.png'
-import six from '/6.png'
-import seven from '/7.jpg'
-import eight from '/8.jpg'
+import one from '/basith.jpg'
+import two from '/mathews.jpg'
+import three from '/navaneeth.jpg'
+import four from '/anakha.jpg'
+import five from '/shamil.jpg'
+import six from '/shuhaib.jpg'
+import seven from '/ron.jpg'
+import eight from '/nikhil.jpg'
 import backSide from '/backSide32.gif'
 
 
